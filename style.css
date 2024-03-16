@@ -62,3 +62,6 @@ section{
 .like button {
     background-color: transparent;
 }
+svg:hover{
+    cursor: pointer;
+}
