@@ -1,11 +1,15 @@
+// Declaring variables
 let cards = document.getElementsByClassName('cards')
 let totalPrice = document.getElementById('totalPrice');
 let totalChamps = document.getElementById('totalChamps');
 
+// Loop to  iterate over each card 
 for (let card of cards) {
     let counter = 0
     let addButton = card.querySelector('.addButton');
     let removeButton = card.querySelector('.removeButton');
+
+    // add button
     addButton.onclick = function(){
         console.log("test")
         let price = parseInt(card.querySelector('.price').innerText);
@@ -13,6 +17,8 @@ for (let card of cards) {
         totalPrice.innerText = parseInt(totalPrice.innerText) + price
         counter++
     }
+
+    // remove button
     removeButton.onclick = function(){
         if(counter > 0){
             console.log("test")
