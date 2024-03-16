@@ -59,3 +59,6 @@ section{
 .topContainer h2 span{
     color: #C89B3C;
 }
+.like button {
+    background-color: transparent;
+}
