@@ -1,4 +1,3 @@
-// Product Class
 class Product {
     constructor(id, name, price) {
         this.id = id;
@@ -7,7 +6,6 @@ class Product {
     }
 }
 
-// ShoppingCartItem Class
 class ShoppingCartItem {
     constructor(product, quantity) {
         this.product = product;
@@ -19,7 +17,6 @@ class ShoppingCartItem {
     }
 }
 
-// ShoppingCart Class
 class ShoppingCart {
     constructor() {
         this.items = [];
@@ -61,7 +58,6 @@ class ShoppingCart {
     }
 }
 
-// Create instances of products
 let products = [];
 let cards = document.getElementsByClassName('cards');
 for (let card of cards) {
@@ -71,7 +67,6 @@ for (let card of cards) {
     products.push(new Product(id, name, price));
 }
 
-// Initialize shopping cart
 let shoppingCart = new ShoppingCart();
 let totalPrice = document.getElementById('totalPrice');
 let totalChamps = document.getElementById('totalChamps');
@@ -82,19 +77,16 @@ for (let card of cards) {
     let removeButton = card.querySelector('.removeButton');
     let likeButton = card.querySelector('.likeButton');
 
-    // Add button
     addButton.onclick = function() {
         shoppingCart.addItem(product);
         updateCartDisplay();
     };
 
-    // Remove button
     removeButton.onclick = function() {
         shoppingCart.removeItem(product.id);
         updateCartDisplay();
     };
 
-    // Like button
     likeButton.onclick = function() {
         if (likeButton.style.fill === 'rgb(255, 255, 255)') {
             likeButton.style.fill = '#0AC8B9';
